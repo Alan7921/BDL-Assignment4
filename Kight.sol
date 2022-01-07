@@ -5,5 +5,9 @@ import "./Piece.sol";
 
 contract Kight is Piece{
 	
+	constructor{
+		pieceName = "Knight";
+	}
+
 	function isMoveValid(uint8 from_x,uint8 from_y,uint8 to_x,uint8 to_y) override returns (bool);
 }
