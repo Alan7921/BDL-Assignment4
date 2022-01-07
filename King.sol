@@ -14,9 +14,10 @@ contract King is Piece{
 	function isCastlingDone() public returns (bool);
 	function setCastlingDone(bool) public;
 
-	//	used to judge whether this is castling move
+	//	used to judge whether this move is castling move
 	function isCastlingMove(uint8 from_x,uint8 from_y,uint8 to_x,uint8 to_y) private returns (bool);
 
+	//	override the method inherited from Piece
 	function isMoveValid(uint8 from_x,uint8 from_y,uint8 to_x,uint8 to_y) override returns (bool);
 
 

@@ -5,6 +5,7 @@ pragma solidity >=0.8.0 <0.9.0;
 contract Board {
 	Square[8][8] private squares;
 
+	// initialize this board, set Pieces on corresponding suqare
 	function initialize() public;
 	function movePiece(uint8 from_x, uint8 from_y, uint8 to_x, uint8 to_y) returns (bool isSuccessful);
 	function setPiece(Piece piece) public;

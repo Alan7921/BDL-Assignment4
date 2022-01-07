@@ -6,11 +6,15 @@ pragma solidity >=0.8.0 <0.9.0;
 interface AbstractGame {
     
     enum State{
-        JOIN_ONE,GUESS_FIRST,RUNNING,TIME_OUT,END
+        JOIN_ONE,GUESS_FIRST,RUNNING,TIME_OUT,GAME_OVER
     }
 
     enum Turn {
         WHITE,BLACK
+    }
+
+    enum Result{
+        WHITE_WIN,BLACK_WIN,DRAW
     }
     
     // used to initialize the game, turn the State to JOIN_ONE
@@ -43,10 +47,8 @@ interface AbstractGame {
     event PlayerQuit(address _addr);
     //  record the address of surrender
     event Surrender(address surrender_addr);
-    //  record the address of winner
-    event Winner(address winner_address);
-    //  record the draw
-    event Draw(address player1_addr, address player2_addr);
+    //  record the result
+    event Result(Result result);
     //  record the address of recipient
     event Withdrawal (address recipient);
 
