@@ -23,8 +23,6 @@ interface AbstractGame {
     function join() public payable;
     // used to quit the waitting for the first joined player
     function quit() public;
-    // used to end each turn and switch between players
-    function endThisRound() public;
     // used for player to give up
     function surrender() public;
     /*  used for player to claim that they are winner, if the opponent could 
